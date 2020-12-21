@@ -6,20 +6,21 @@ class Char extends SpriteBodyComponent {
   Char(Sprite sprite, Vector2 size) : super(sprite, size);
 
   List<Vector2> hitbox = [
-    Vector2(-22.5, 22.5),
-    Vector2(22.5, 22.5),
-    Vector2(22.5, -22.5),
-    Vector2(-22.5, -22.5),
+    Vector2(-2, 2),
+    Vector2(2, 2),
+    Vector2(2, -2),
+    Vector2(-2, -2),
   ];
 
   bool isMoving = false;
 
   @override
   void update(double dt) {
-    if (isMoving) {
-      body.applyLinearImpulse(Vector2(10000, 0), body.worldCenter, true);
-    }
     super.update(dt);
+    const maxSpeed = 20;
+    if (isMoving && body.linearVelocity.x < maxSpeed) {
+      body.applyLinearImpulse(Vector2(2, 0), body.worldCenter, true);
+    }
   }
 
   @override

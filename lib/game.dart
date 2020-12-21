@@ -8,8 +8,8 @@ import 'package:physics/char.dart';
 
 class Game extends Forge2DGame with KeyboardEvents {
   Char char;
-  Game() {
-    char = Char(Sprite(Flame.images.fromCache("box_big.png")), Vector2(45, 45));
+  Game() : super(scale: 10) {
+    char = Char(Sprite(Flame.images.fromCache("box_big.png")), Vector2(4, 4));
     super.add(char);
   }
 
