@@ -11,13 +11,12 @@ class Game extends Forge2DGame with KeyboardEvents {
   Game() : super(scale: 16.0) {
     char = Char(Sprite(Flame.images.fromCache("box_big.png")), Vector2(45 / 16.0, 45 / 16.0));
     super.add(char);
-
-    print(fps(120));
   }
 
   @override
   void update(double dt) {
     cameraFollow(char, horizontal: 0.0, vertical: 0.0);
+    print(fps(120));
     super.update(dt);
   }
 
