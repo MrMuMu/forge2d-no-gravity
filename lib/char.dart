@@ -6,10 +6,10 @@ class Char extends SpriteBodyComponent {
   Char(Sprite sprite, Vector2 size) : super(sprite, size);
 
   List<Vector2> hitbox = [
-    Vector2(-2, 2),
-    Vector2(2, 2),
-    Vector2(2, -2),
-    Vector2(-2, -2),
+    Vector2(-22.5 / 16.0, 22.5 / 16.0),
+    Vector2(22.5 / 16.0, 22.5 / 16.0),
+    Vector2(22.5 / 16.0, -22.5 / 16.0),
+    Vector2(-22.5 / 16.0, -22.5 / 16.0),
   ];
 
   bool isMoving = false;
