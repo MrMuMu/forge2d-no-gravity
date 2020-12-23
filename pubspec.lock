@@ -63,14 +63,16 @@ packages:
       name: flame
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "1.0.0-rc2"
+    version: "1.0.0-rc4"
   flame_forge2d:
     dependency: "direct main"
     description:
-      name: flame_forge2d
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "0.5.0-rc1"
+      path: "."
+      ref: "spydon.rc3-upgrade"
+      resolved-ref: ad7a65c6a4f1d7f293fa738760e7200ac6b6a3ed
+      url: "https://github.com/flame-engine/flame_forge2d.git"
+    source: git
+    version: "0.5.0-rc2"
   flutter:
     dependency: "direct main"
     description: flutter

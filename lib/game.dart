@@ -4,11 +4,12 @@ import 'package:flame/keyboard.dart';
 import 'package:flame/sprite.dart';
 import 'package:flame_forge2d/forge2d_game.dart';
 import 'package:flutter/services.dart';
-import 'package:physics/char.dart';
+
+import 'char.dart';
 
 class Game extends Forge2DGame with KeyboardEvents {
   Char char;
-  Game() : super(scale: 16.0) {
+  Game() : super(gravity: Vector2(0, -1000), scale: 16.0) {
     char = Char(Sprite(Flame.images.fromCache("box_big.png")), Vector2(45 / 16.0, 45 / 16.0));
     super.add(char);
   }
@@ -16,7 +17,7 @@ class Game extends Forge2DGame with KeyboardEvents {
   @override
   void update(double dt) {
     cameraFollow(char, horizontal: 0.0, vertical: 0.0);
-    print(fps(120));
+    // print(fps());
     super.update(dt);
   }
 
