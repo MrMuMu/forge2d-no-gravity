@@ -17,10 +17,10 @@ class Char extends SpriteBodyComponent {
   @override
   void update(double dt) {
     super.update(dt);
-    const maxSpeed = 20;
-    if (isMoving && body.linearVelocity.x < maxSpeed) {
-      body.applyLinearImpulse(Vector2(2, 0), body.worldCenter, true);
-    }
+    // const maxSpeed = 20;
+    // if (isMoving && body.linearVelocity.x < maxSpeed) {
+    //   body.applyLinearImpulse(Vector2(0, 2), body.worldCenter, true);
+    // }
   }
 
   @override
